@@ -63,6 +63,7 @@ penguins_filtered <- penguins_raw %>%
     `culmen_depth_mm` < 30
   )
 
+#Plot the data 
 ggplot(penguins_filtered, aes(x = `culmen_depth_mm`, y = `culmen_length_mm`, shape = sex, color = sex)) +
   geom_point(size = 5, alpha = 1.0) +  # Add points
   geom_smooth(method = "lm", se = FALSE, color = "blue", aes(group = 1)) +  # Single trend line 
