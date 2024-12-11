@@ -358,7 +358,7 @@ renv::snapshot()
 
 ### a) GitHub
 
-*GitHub link:* https://github.com/Anonymous94394/PalmerPengiuns_2.git
+*GitHub link:* https://github.com/Anonymous94394/PalmerPenguins_1.git
 
 ### b) Share your repo with a partner, download, and try to run their data pipeline.
 
