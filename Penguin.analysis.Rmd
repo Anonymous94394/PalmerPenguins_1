@@ -14,13 +14,12 @@ bibliography: references.bib
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-###Initialize renv Environment to install required packages 
-
-```{r, message = FALSE, warning = FALSE}
+```{r, include=FALSE}
+# Initialize renv Environment to install required packages 
 renv::restore()
 ```
 
-### Load packages
+### Load the packages
 
 ```{r, message = FALSE, warning = FALSE}
 library(palmerpenguins)

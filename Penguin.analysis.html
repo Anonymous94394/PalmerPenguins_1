@@ -1819,8 +1819,8 @@ border-radius: 0px;
 </div>
 
 
-<div id="load-packages" class="section level3">
-<h3>Load packages</h3>
+<div id="load-the-packages" class="section level3">
+<h3>Load the packages</h3>
 <pre class="r"><code>library(palmerpenguins)
 library(ggplot2)
 library(janitor)
@@ -1839,9 +1839,9 @@ library(renv)</code></pre>
 <div id="load-the-data" class="section level3">
 <h3>Load the data</h3>
 <pre class="r"><code>#Load the data 
-penguins_raw &lt;- read.csv(here(&quot;data&quot;, &quot;penguins_raw.csv&quot;)) #Check.names + FALSE is so that when I knit the file, R does not change the collumn names, so that my graph of the raw data no longer works. 
+penguins_raw &lt;- read.csv(here(&quot;data&quot;, &quot;penguins_raw.csv&quot;)) 
 
-#Clean the column names to prevent problems with R converting collumn names when knitting 
+# Clean column names to ensure consistency and prevent issues with special characters or spaces during knitting
 penguins_raw &lt;- penguins_raw %&gt;% clean_names()</code></pre>
 </div>
 <div id="section-1-data-visualization-for-science-communication" class="section level1">
@@ -1912,28 +1912,34 @@ these species to gain insights into niche differentiation.</p>
 <caption>Preview of Penguin Dataset</caption>
 <colgroup>
 <col width="0%" />
+<col width="0%" />
 <col width="1%" />
 <col width="1%" />
 <col width="2%" />
-<col width="3%" />
+<col width="2%" />
 <col width="3%" />
 <col width="3%" />
 <col width="4%" />
-<col width="11%" />
-<col width="2%" />
-<col width="3%" />
-<col width="6%" />
 <col width="4%" />
 <col width="5%" />
-<col width="3%" />
 <col width="5%" />
-<col width="5%" />
-<col width="5%" />
-<col width="3%" />
 <col width="2%" />
-<col width="5%" />
-<col width="5%" />
-<col width="9%" />
+<col width="3%" />
+<col width="8%" />
+<col width="1%" />
+<col width="2%" />
+<col width="4%" />
+<col width="3%" />
+<col width="4%" />
+<col width="2%" />
+<col width="3%" />
+<col width="3%" />
+<col width="4%" />
+<col width="2%" />
+<col width="1%" />
+<col width="3%" />
+<col width="3%" />
+<col width="7%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -1943,6 +1949,12 @@ these species to gain insights into niche differentiation.</p>
 <th align="right">x_2_2_2</th>
 <th align="right">x_2_2_2_2</th>
 <th align="right">x_2_2_2_2_2</th>
+<th align="right">x_2_2_2_2_2_2</th>
+<th align="right">x_2_2_2_2_2_2_2</th>
+<th align="right">x_2_2_2_2_2_2_2_2</th>
+<th align="right">x_2_2_2_2_2_2_2_2_2</th>
+<th align="right">x_2_2_2_2_2_2_2_2_2_2</th>
+<th align="right">x_2_2_2_2_2_2_2_2_2_2_2</th>
 <th align="left">study_name</th>
 <th align="right">sample_number</th>
 <th align="left">species</th>
@@ -1964,6 +1976,12 @@ these species to gain insights into niche differentiation.</p>
 </thead>
 <tbody>
 <tr class="odd">
+<td align="right">1</td>
+<td align="right">1</td>
+<td align="right">1</td>
+<td align="right">1</td>
+<td align="right">1</td>
+<td align="right">1</td>
 <td align="right">1</td>
 <td align="right">1</td>
 <td align="right">1</td>
@@ -1995,6 +2013,12 @@ these species to gain insights into niche differentiation.</p>
 <td align="right">2</td>
 <td align="right">2</td>
 <td align="right">2</td>
+<td align="right">2</td>
+<td align="right">2</td>
+<td align="right">2</td>
+<td align="right">2</td>
+<td align="right">2</td>
+<td align="right">2</td>
 <td align="left">PAL0708</td>
 <td align="right">2</td>
 <td align="left">Adelie Penguin (Pygoscelis adeliae)</td>
@@ -2014,6 +2038,12 @@ these species to gain insights into niche differentiation.</p>
 <td align="left">NA</td>
 </tr>
 <tr class="odd">
+<td align="right">3</td>
+<td align="right">3</td>
+<td align="right">3</td>
+<td align="right">3</td>
+<td align="right">3</td>
+<td align="right">3</td>
 <td align="right">3</td>
 <td align="right">3</td>
 <td align="right">3</td>
@@ -2045,6 +2075,12 @@ these species to gain insights into niche differentiation.</p>
 <td align="right">4</td>
 <td align="right">4</td>
 <td align="right">4</td>
+<td align="right">4</td>
+<td align="right">4</td>
+<td align="right">4</td>
+<td align="right">4</td>
+<td align="right">4</td>
+<td align="right">4</td>
 <td align="left">PAL0708</td>
 <td align="right">4</td>
 <td align="left">Adelie Penguin (Pygoscelis adeliae)</td>
@@ -2070,6 +2106,12 @@ these species to gain insights into niche differentiation.</p>
 <td align="right">5</td>
 <td align="right">5</td>
 <td align="right">5</td>
+<td align="right">5</td>
+<td align="right">5</td>
+<td align="right">5</td>
+<td align="right">5</td>
+<td align="right">5</td>
+<td align="right">5</td>
 <td align="left">PAL0708</td>
 <td align="right">5</td>
 <td align="left">Adelie Penguin (Pygoscelis adeliae)</td>
@@ -2089,6 +2131,12 @@ these species to gain insights into niche differentiation.</p>
 <td align="left">NA</td>
 </tr>
 <tr class="even">
+<td align="right">6</td>
+<td align="right">6</td>
+<td align="right">6</td>
+<td align="right">6</td>
+<td align="right">6</td>
+<td align="right">6</td>
 <td align="right">6</td>
 <td align="right">6</td>
 <td align="right">6</td>
@@ -2512,7 +2560,7 @@ significant, so the null hypothesis can be rejected. However, the
 pairwise comparison revealed that there’s no significant difference
 between Adelie and Chinstrap (P&gt;0.05), while both Adelie and
 Chinstrap significantly differ from Gentoo (P&lt;0.0001). These results
-are depicted in Figure 4.</p>
+are displayed in Figure 4.</p>
 </blockquote>
 <blockquote>
 <p>From these results it appears Adelie and Chinstrap and more likely to
@@ -2607,7 +2655,9 @@ Science Helps Researchers Succeed.”</span> <em>eLife</em> 5: e16800. <a href="
 </div>
 </div>
 <hr />
-<pre class="r"><code>renv::init()
+<pre class="r"><code>#Setting up library store 
+renv::init()</code></pre>
+<pre class="r"><code>#Run this code after editing the libraries to save changes 
 renv::snapshot()</code></pre>
 <pre><code>## - The lockfile is already up to date.</code></pre>
 </div>
