@@ -1,6 +1,7 @@
 summarize_data <- function(data, group_var, Measurement, caption) {
-  summary_stats <- data %>% #First generate variables  
-    group_by(!!sym(group_var)) %>%  # Group by the specified variable
+  #First generate variables  
+  summary_stats <- data %>%  
+    group_by(!!sym(group_var)) %>%  # Group by the specified variable (e.g. species)
     summarise(
       group_mean = mean(!!sym(Measurement), na.rm = TRUE),
       group_sd = sd(!!sym(Measurement), na.rm = TRUE)
