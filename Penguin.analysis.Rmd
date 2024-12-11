@@ -56,9 +56,10 @@ penguins_raw <- penguins_raw %>% clean_names()
 
 ```{r echo=FALSE, warning=FALSE, fig.align='center', message = FALSE}
 
+#Filter the data to remove extreme values 
 penguins_filtered <- penguins_raw %>%
   filter(
-    `culmen_length_mm` > 33, # backticks around column names with spaces
+    `culmen_length_mm` > 33,
     `culmen_depth_mm` < 30
   )
 
