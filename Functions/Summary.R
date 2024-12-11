@@ -1,5 +1,5 @@
 summarize_data <- function(data, group_var, Measurement, caption) {
-  summary_stats <- data %>% #First generate variations 
+  summary_stats <- data %>% #First generate variables  
     group_by(!!sym(group_var)) %>%  # Group by the specified variable
     summarise(
       group_mean = mean(!!sym(Measurement), na.rm = TRUE),
